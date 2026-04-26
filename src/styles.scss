@@ -1,0 +1,53 @@
+/* HRM App - Global Styles */
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  background: #f0f4f8;
+  color: #1e293b;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+/* Form controls */
+.form-control, .form-select {
+  border-radius: 8px;
+  border-color: #d1d5db;
+  font-size: 0.82rem;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.form-control:focus, .form-select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+}
+.form-control.is-invalid, .form-select.is-invalid {
+  border-color: #ef4444;
+}
+.form-control.is-invalid:focus {
+  box-shadow: 0 0 0 3px rgba(239,68,68,0.15);
+}
+.invalid-feedback { font-size: 0.7rem; }
+
+/* Buttons */
+.btn { border-radius: 8px; font-size: 0.82rem; font-weight: 500; }
+.btn-sm { padding: 5px 12px; }
+
+/* Cards */
+.card { border-radius: 12px; border: 1px solid #e5e7eb; }
+
+/* Utilities */
+.min-width-0 { min-width: 0; }
+
+/* View transitions */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.tab-content-area > * { animation: fade-in 0.2s ease; }
